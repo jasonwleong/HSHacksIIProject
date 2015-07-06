@@ -1,0 +1,59 @@
+
+public class FriendLinkedListPart01 
+{
+	private FriendNode head;
+	private int length;
+
+	/*
+	 *  creates an empty new list
+	 */
+	public FriendLinkedList()
+	{
+		this.head = null;
+		this.length = 0;
+	}
+
+	/*
+	 * Checks if head is pointing to any node
+	 */
+	public boolean isEmpty()
+	{
+		if (this.head == null)	// alternatively, check this.length == 0;
+			return true;
+		return false;
+	}
+
+	/*
+	 * add a node to the beginning of a list
+	 */
+	public void addFirstNode(FriendNode newFriend)
+	{
+		// QUESTION: There is a bug here, can you find it and correct it?
+		if (this.isEmpty() != false)
+		{
+			newFriend.setNext(head);
+		}
+
+		// change the head of the this list to our new friend
+		head = newFriend;
+		this.length++;
+	}
+
+
+	// PRACTICE
+	public void printFirstNode()
+	{
+		// TO COMPLETE: print only first node in list
+		FriendNode current;
+		while (current != null)
+		{
+			System.out.println(current);
+		}
+	}
+	
+	// PRACTICE
+	public void printList()
+	{
+		// TO COMPLETE: print all nodes in list, starting at head node
+	}
+}

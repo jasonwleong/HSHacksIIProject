@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+
+
+public class Champion {
+	
+	public double hp, ad, as, armor, mr, apen, apenPercent;
+	public int level;
+	public double ADPerLevel, ArmorPerLevel, HPPerLevel;
+	public ArrayList<Item> items = new ArrayList<Item>();
+	
+	public Champion() {
+		this.hp = 500.0;
+		this.ad = 50.0;
+		this.as = 1.0;
+		this.armor = 20;
+		this.mr = 0;
+		this.level = 1;
+		this.apen = 0.0;
+		this.apenPercent = 0;
+	}
+	
+	public Champion(double hp, double ad, double as, double armor, double mr,
+			int level) {
+		this.hp = hp;
+		this.ad = ad;
+		this.as = as;
+		this.armor = armor;
+		this.mr = mr;
+		this.level = level;
+	}
+	
+	public double getBaseAd() {
+		return (double)(this.ad + this.level * ADPerLevel);
+	}
+	
+	public double getBaseArmor() {
+		return (double)(this.armor + this.level * ArmorPerLevel);
+	}
+	
+	public double getBaseHP() {
+		return (double)(this.hp + this.level * HPPerLevel);
+	}
+	
+
+}

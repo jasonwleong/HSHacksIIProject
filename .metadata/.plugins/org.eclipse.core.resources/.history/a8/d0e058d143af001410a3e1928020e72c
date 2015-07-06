@@ -1,0 +1,15 @@
+
+public class ListOfItems {
+	
+	//String name, double hp, double ad, double as, double armor, double mr, double apen, double apenPercent)
+	//public static final Item INFINITY_EDGE = new Item("Infinity Edge", 0,  );
+	//												name     , hp, ad , as,def, mr,pen,pp 
+	public static final Item BF_SWORD = new Item("B.F. Sword", 0 , 50 , 0 , 0 , 0 , 0 , 0);
+	public static final Item BILGEWATER_CUTLASS = new Item("Bilgewater Cutlass", 0 , 25, 0, 0, 0, 0, 0);
+	public static final Item BLADE_OF_THE_RUINED_KING = new Item("Blade of the Ruined King", 0, 25, .4, 0, 0, 0, 0);
+	public static final Item DORANS_BLADE = new Item("Doran's Blade", 70, 7, 0, 0, 0, 0, 0);
+	public static final Item ESSENCE_REAVER = new Item("Essence Reaver", 0, 80, 0, 0, 0, 0, 0);
+	public static final Item FROZEN_MALLET = new Item("Frozen Mallet", 700, 30, 0, 0, 0, 0, 0);
+	
+	
+}

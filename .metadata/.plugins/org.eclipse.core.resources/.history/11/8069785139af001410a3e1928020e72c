@@ -1,0 +1,23 @@
+
+public abstract class Item {
+
+	public double hp, ad, as, armor, mr, apen, apenPercent;
+	public double ADPerLevel, ArmorPerLevel;
+	
+	public Item() {
+		
+	}
+	
+	public Item(double hp, double ad, double as, double armor, double mr, double apen, double apenPercent) {
+		this.hp = hp;
+		this.ad = ad;
+		this.as = as;
+		this.armor = armor;
+		this.mr = mr;
+		this.apen = apen;
+		this.apenPercent = apenPercent;
+	}
+	
+	
+	
+}

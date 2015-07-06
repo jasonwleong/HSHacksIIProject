@@ -1,0 +1,19 @@
+
+public class CountryList {
+
+	private CountryNode head;
+	private int length;
+	
+	public CountryList() {
+		this.head = null;
+		this.length = 0;
+	}
+	
+	public void add(Country country) {
+		this.
+	}
+	
+	public int getLength() {
+		return this.length();
+	}
+}

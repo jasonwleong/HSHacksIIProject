@@ -1,0 +1,35 @@
+
+public class CountryList {
+
+	private CountryNode head;
+	private int length;
+	private ArrayList<Country> countryList = new ArrayList<Country>();
+	
+	public CountryList() {
+		this.head = null;
+		this.length = 0;
+	}
+	
+	public void add(Country country) {
+		if (!isEmpty()) {
+			this.head = new CountryNode(country);
+		}
+		else {
+			head.setNext(new CountryNode(country));
+		}
+		this.length++;
+	}
+	
+	public int getLength() {
+		return this.length;
+	}
+	
+	public boolean isEmpty() {
+		if (this.head == null) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+}

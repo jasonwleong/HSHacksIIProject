@@ -1,0 +1,12 @@
+
+public abstract class Item {
+
+	public double hp, ad, as, armor, mr, apen, apenPercent;
+	public double ADPerLevel, ArmorPerLevel;
+	
+	public Item() {
+		
+	}
+	
+	
+}

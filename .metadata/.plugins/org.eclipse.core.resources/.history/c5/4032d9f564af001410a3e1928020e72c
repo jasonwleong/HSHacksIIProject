@@ -1,0 +1,52 @@
+
+
+public class SubscriptionYear {
+	
+	private int year;
+	private double subscriptions;
+	
+	/**
+	 *  constructor that initializes the private member variables of
+	 *  year and subscriptions as the given values when a new SubscriptionYear
+	 *  is created in another class
+	 * 
+	 */
+	public SubscriptionYear(int year, double subscriptions) {
+		this.year = year;
+		this.subscriptions = subscriptions;
+		
+	}
+	
+	/**
+	 *  sets year
+	 * 
+	 */
+	public void setYear(int year) {
+		this.year = year;
+	}
+	
+	/**
+	 *  sets subscriptions 
+	 * 
+	 */
+	public void setSubscriptions(double subscriptions) {
+		this.subscriptions = subscriptions;
+	}
+	
+	/**
+	 *  gets subscriptions
+	 * 
+	 */
+	public double getSubscriptions() {
+		return this.subscriptions;
+		
+	}
+	
+	/**
+	 * gets years 
+	 * 
+	 */
+	public int getYear() {
+		return this.year;
+	}
+}

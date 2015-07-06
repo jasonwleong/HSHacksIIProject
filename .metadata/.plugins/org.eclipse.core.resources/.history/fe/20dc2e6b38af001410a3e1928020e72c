@@ -1,0 +1,79 @@
+import java.util.ArrayList;
+
+
+public class Champion {
+	
+	public double hp, ad, as, armor, mr, apen, apenPercent;
+	public int level;
+	public double ADPerLevel, ArmorPerLevel, HPPerLevel;
+	public ArrayList<Item> items = new ArrayList<Item>();
+	public String name;
+	
+	//everything is public so we don't need to make setters+getters
+	
+	
+	public Champion() {
+		this.name = "Champion";
+		this.hp = 500.0;
+		this.ad = 50.0;
+		this.as = 1.0;
+		this.armor = 20;
+		this.mr = 0;
+		this.level = 1;
+		this.apen = 0.0;
+		this.apenPercent = 0;
+	}
+	
+	public Champion(String name, double hp, double ad, double as, double armor, double mr,
+			int level) {
+		this.name = name;
+		this.hp = hp;
+		this.ad = ad;
+		this.as = as;
+		this.armor = armor;
+		this.mr = mr;
+		this.level = level;
+	}
+	
+	public double getBaseAD() {
+		return (double)(this.ad + this.level * ADPerLevel);
+	}
+	
+	public double getBaseArmor() {
+		return (double)(this.armor + this.level * ArmorPerLevel);
+	}
+	
+	public double getBaseHP() {
+		return (double)(this.hp + this.level * HPPerLevel);
+	}
+	
+	public double getTotalHP() {
+		double totalHP;
+		totalHP = getBaseHP();
+		for (int i = 0; i < this.items.size(); i ++) {
+			totalHP += items.get(i).hp;
+		}
+		return totalHP;
+		
+	}
+	
+	public double getTotalAD() {
+		double totalAD;
+		totalAD = getBaseAD();
+		for (int i = 0; i < this.items.size(); i ++) {
+			totalAD += items.get(i).ad;
+		}
+		return totalAD;
+		
+	}
+	
+	public double getTotalapen() {
+		double totalapen = 0;
+		for (int i = 0; i < this.items.size(); i ++) {
+			totalapen += items.get(i).apen;
+		}
+		return totalapen;
+		
+	}
+
+}

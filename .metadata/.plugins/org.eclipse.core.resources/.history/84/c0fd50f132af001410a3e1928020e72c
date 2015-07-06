@@ -1,0 +1,29 @@
+
+public class Champion {
+	
+	public double hp, ad, as, armor, mr, apen;
+	public int level;
+	public int ADPerLevel;
+	public int ArmorPerLevel;
+	
+	public Champion() {
+		this.hp = 500.0;
+		this.ad = 50.0;
+		this.as = 1.0;
+		this.armor = 20;
+		this.mr = 0;
+		this.level = 1;
+		this.apen = 0.0;
+	}
+	
+	public double baseAd() {
+		return (double)(this.ad + this.level * ADPerLevel);
+	}
+	
+	public double baseArmor() {
+		return (double)(this.armor + this.level * ArmorPerLevel);
+
+	}
+	
+
+}

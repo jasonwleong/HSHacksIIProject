@@ -1,0 +1,20 @@
+
+public class CountryNode {
+
+	private String name;
+	private CountryNode next;
+	
+	public CountryNode(String country) {
+		this.name = country;
+		this.next = null;
+		
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public CountryNode getNext() {
+		return this.next;
+	}
+}

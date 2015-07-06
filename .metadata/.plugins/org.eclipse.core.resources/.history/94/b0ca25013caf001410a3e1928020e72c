@@ -1,0 +1,8 @@
+
+public class ListOfItems {
+	
+	//String name, double hp, double ad, double as, double armor, double mr, double apen, double apenPercent)
+	//public static final Item INFINITY_EDGE = new Item("Infinity Edge", 0,  );
+	//												n,        
+	public static final Item BF_SWORD = new Item("B.F. Sword", 0 , 50 , 0 , 0 , 0 , 0 , 0);
+}

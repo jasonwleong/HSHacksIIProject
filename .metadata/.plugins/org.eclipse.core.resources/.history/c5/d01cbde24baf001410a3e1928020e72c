@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Champion randomChamp = ListOfADCS.ASHE;
+		Champion attackingChamp = ListOfADCS.CAITLYN;
+		Champion defendingChamp = ListOfADCS.LUCIAN;
+		attackingChamp.items.add(ListOfItems.LONG_SWORD);
+		attackingChamp.items.add(ListOfItems.LONG_SWORD);
+		attackingChamp.items.add(ListOfItems.LAST_WHISPER);
+		defendingChamp.items.add(ListOfItems.CLOTH_ARMOR);
+		defendingChamp.items.add(ListOfItems.CLOTH_ARMOR);
+		defendingChamp.items.add(ListOfItems.CLOTH_ARMOR);
+		
+		
+		System.out.println("base attack = " + attackingChamp.getBaseAD());
+		System.out.println("total attack = " + attackingChamp.getTotalAD());
+		System.out.println("total defense = " + defendingChamp.getTotalArmor());
+		
+		System.out.println("Running damage calculator on " + attackingChamp.name + " attacking " + defendingChamp.name);
+		System.out.println("Damage Done = " + amountOfDamageDone(attackingChamp, defendingChamp));
+		
+		
+	}
+	
+	public static double amountOfDamageDone(Champion attChamp, Champion defChamp){
+		double damageDone = 0;
+		double defChampArmor = defChamp.getTotalArmor() * (1 - attChamp.getAPenPercentage());
+		System.out.println("attack champ apen percent = " + attChamp.getAPenPercentage());
+		System.out.println("defending champion armor after percent pen = " + defChampArmor);
+		defChampArmor = defChampArmor - attChamp.getTotalFlatAPen();
+		System.out.println("defChampArmor after flatAPEN " + defChampArmor);
+		damageDone = attChamp.getTotalAD() * (100 / (100 + defChampArmor));
+		return damageDone;
+		
+	}
+}
